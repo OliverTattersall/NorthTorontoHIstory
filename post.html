@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                margin:auto;
+                overflow: hidden;
+                background-color: rgb(255, 255, 255);
+                border-top:2px solid #000000;
+                border-bottom:2px solid #000000;
+            }
+
+            li {
+                /* margin:auto; */
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 26px;
+                text-decoration: none;
+            }
+
+            /* li a:hover:not(.active) {
+                background-color: rgb(100, 111, 146);
+            } */
+
+            li a:hover {
+                /* background-color: rgb(100, 111, 146); */
+                color:rgb(110, 108, 218);
+            }
+
+            .active {
+                text-shadow: aqua;
+                /* background-color: rgb(123, 153, 209); */
+            }
+            #center{
+                margin:auto;
+                /* background-color: aqua; */
+                width: 65%;
+                /* height:100%; */
+            }
+            p{
+                text-indent:30px;
+                line-height: 25px;
+            }h1{
+                font-size: 45px;
+                text-align: center;
+            }img{
+                width: 100%;
+                height: 50%;
+            }#center{
+                float: left;
+                /* margin:auto; */
+                margin-left: 15%;
+                /* margin-right: 0; */
+                /* background-color: aqua; */
+                width: 65%;
+                /* height:100%; */
+            }#center2{
+                /* float: left; */
+                /* margin:auto; */
+                margin:auto;
+                /* margin-right: 0; */
+                /* background-color: aqua; */
+                width: 100%;
+                /* height:100%; */
+            }
+            #title{
+                width:100%;
+                height:40px;
+            }#stuff{
+                width: 100%;
+                height:300px;
+            }.switch {
+                /* margin-top: 0; */
+                margin-left:5%;
+                position: relative;
+                /* display: inline-block; */
+                float: left;
+                width: 52px;
+                height: 26px;
+                
+                
+            }
+
+            .switch input { 
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 19px;
+                width: 19px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked + .slider {
+                background-color: #2196F3;
+            }
+
+            input:focus + .slider {
+                box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+
+            /* Rounded sliders */
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }#addstory{
+                background-color: #555555; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }textarea{
+                font-size: 16px;
+            }input{
+                font-size: 16px;
+            }#about{
+                float: right;
+                margin-right:0;
+                /* background-color:blueviolet; */
+                width: 15%;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <h1>The History Of North Toronto</h1>
+        <ul>
+            <li style="padding-left: 33%;"><a class="active" href="fake.html">Home</a></li>
+            <li><a href="page2.html">Stories</a></li>
+            <li><a href="page3.html">More History</a></li>
+            <li><a href="page4.html">Add your own Stories or History</a></li>
+        </ul>
+        <div id="center">
+           
+                    <br>
+                    <input type="text" id="Title" placeholder="Title of the story">
+                    <input type="text" id="Title" placeholder="Date the story occured">
+                    <textarea id="stuff" placeholder="Write your Story or History here"></textarea>
+                    <div id="buttons" style="background-color: blueviolet;">
+                       
+                        <p style="float: left; margin-top: 0;">Story</p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <p style="float: left;margin-top: 0;margin-right: 20px;">History</p>
+                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><i class="fa fa-paperclip"></i></button>
+                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><b>B</b></button>
+                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><em>I</em></button>
+                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><u>U</u></button>
+                    </div>
+                    <br>
+                    <br>
+                    <button id="addstory">Add Story</button>
+            
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet,  dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sn dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+        </div>
+    </body>
+</html>

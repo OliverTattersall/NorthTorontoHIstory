@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebase/7.14.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebase/7.14.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebase/7.14.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebase/7.14.0/firebase-storage.js"></script>
+
+
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                margin:auto;
+                overflow: hidden;
+                background-color: rgb(255, 255, 255);
+                border-top:2px solid #000000;
+                border-bottom:2px solid #000000;
+            }
+
+            li {
+                /* margin:auto; */
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 26px;
+                text-decoration: none;
+            }
+
+            /* li a:hover:not(.active) {
+                background-color: rgb(100, 111, 146);
+            } */
+
+            li a:hover {
+                /* background-color: rgb(100, 111, 146); */
+                color:rgb(110, 108, 218);
+            }
+
+            .active {
+                text-shadow: aqua;
+                /* background-color: rgb(123, 153, 209); */
+            }
+            #center{
+                margin:auto;
+                /* background-color: aqua; */
+                width: 65%;
+                /* height:100%; */
+            }
+            p{
+                text-indent:30px;
+                line-height: 25px;
+            }h1{
+                font-size: 45px;
+                text-align: center;
+            }img{
+                width: 100%;
+                height: 50%;
+            }
+
+
+        </style>
+
+
+    </head>
+    <body>
+        <h1>The History Of North Toronto</h1>
+        <ul>
+            <li style="padding-left: 33%;"><a class="active" href="fake.html">Home</a></li>
+            <li><a href="page2.html">Stories</a></li>
+            <li><a href="page3.html">More History</a></li>
+            <li><a href="page4.html">Add your own Stories or History</a></li>
+        </ul>
+        <div id="center">
+            <div id="intro">
+                <h2>Brief History of Toronto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                <img src="placeholder2.png">
+                <br>
+            </div>
+            <div id="NorthToronto">
+                <div>
+                    <h2 style="text-align: center; font-size: 30px;">North Toronto</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+
+                </div>
+                <div class="location" id="location 1">
+                    <h2>Location 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+                <div class="location" id="location 2">
+                    <h2>Location 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+                <div class="location" id="location 3">
+                    <h2>Location 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+                <div class="location" id="location 4">
+                    <h2>Location 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyAwfVDBdOqoBcngST7p0AKpyd6ls4_CA3M",
+                authDomain: "northtoronto-d4b21.firebaseapp.com",
+                databaseURL: "https://northtoronto-d4b21.firebaseio.com",
+                projectId: "northtoronto-d4b21",
+                storageBucket: "northtoronto-d4b21.appspot.com",
+                messagingSenderId: "121807116095",
+                appId: "1:121807116095:web:6cffa8780a7d1a1fbae58a",
+                measurementId: "G-R2XHV4VHFY"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics()
+
+
+        </script>
+
+
+    </body>
+</html>
