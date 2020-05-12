@@ -65,6 +65,9 @@
             }img{
                 width: 100%;
                 height: 50%;
+            }.slider{
+                height:0px;
+                outline: none;
             }
 
 
@@ -93,14 +96,18 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
 
                 </div>
-                <div class="location" id="location 1">
-                    <h2>Location 1</h2>
+                <div class="location" id="DuplexEg">
+                    <h2>Duplex and Eglinton Intersection</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
                     <div class="slider images">
-                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                        <img id="test" src="images/DuplexEgold.jpg" style="width: 915px; position:absolute; clip: rect(0, 458, 500px, 0);">
+                        <img id="test2" src="images/DuplexEgnew.jpg" style="width: 915px; position:absolute; clip: rect(0,915, 500px,458)">
+                        <div id="slidertest" class="slidecontainer">
+                            <input type="range" min="0" max="1000" value="500" class="slider" id="myRange" style="width: 915px;margin-top: 150px; margin-left:0px;height:100px; position:absolute;">
+                        </div>
                     </div>
                 </div>
-                <div class="location" id="location 2">
+                <div class="location" id="location 2" style="margin-top: 490px;">
                     <h2>Location 2</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
                     <div class="slider images">
@@ -140,8 +147,17 @@
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             firebase.analytics()
-
-
+            // var widther=document.getElementById("center").clientWidth;
+            // alert(widther)
+            document.getElementById("myRange").oninput=()=>{
+                var slideinput=document.getElementById("myRange").value;
+                
+                var imagewidth=document.getElementById("test").width;
+                
+                document.getElementById("test").style.clip="rect(0,"+imagewidth*(0.001*slideinput)+"px, 500px,0)"
+                document.getElementById("test2").style.clip="rect(0,915px, 500px,"+ (imagewidth-(imagewidth*((0.001*(1000-slideinput)))))+"px)"
+                // document.getElementById("test2").style.clip="rect(0,420px,200px,200px)"
+            }
         </script>
 
 
