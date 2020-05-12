@@ -179,7 +179,7 @@
             </div>
             <div id="about">
                 <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                <p>This page is where all user added story is. This means any story added by people visiting the website on the add your own stories and history page.  If you would like to add your own history please go to the "Add your own stories and history" page.</p>
                 
 
             </div>
@@ -212,12 +212,10 @@
                     if(count%2==1){
                         outputstrleft+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['story']+'</p><p>'+doc.data()['author']+'</p><p>'+doc.data()['dateposted']+'</p></div></div>'
                     }else if(count%2==0){
-                        outputstrright+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['story']+'</p><p>'+doc.data()['author']+'</p><p>'+doc.data()['dateposted']+'</p></div></div>'
+                        outputstrright+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['story']+'</p><p>'+doc.data()['author']+'</p><p>Posted: '+doc.data()['dateposted']+'</p></div></div>'
                     }
                     list.push(doc.data())
-                    // console.log(doc.data())
-                    // outputstr+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['story']+'</p><p>'+doc.data()['author']+'</p></div></div>'
-                    // console.log(outputstr)
+
                 })
             }).then(()=>{
                 document.getElementById("right").innerHTML=outputstrright;
