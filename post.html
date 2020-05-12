@@ -1,17 +1,17 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script>
+
+
         <style>
             ul {
                 list-style-type: none;
@@ -65,117 +65,14 @@
             }img{
                 width: 100%;
                 height: 50%;
-            }#center{
-                float: left;
-                /* margin:auto; */
-                margin-left: 15%;
-                /* margin-right: 0; */
-                /* background-color: aqua; */
-                width: 65%;
-                /* height:100%; */
-            }#center2{
-                /* float: left; */
-                /* margin:auto; */
-                margin:auto;
-                /* margin-right: 0; */
-                /* background-color: aqua; */
-                width: 100%;
-                /* height:100%; */
-            }
-            #content{
-                width: 100%;
-                height:300px;
-            }.switch {
-                /* margin-top: 0; */
-                margin-left:5%;
-                position: relative;
-                /* display: inline-block; */
-                float: left;
-                width: 52px;
-                height: 26px;
-                
-                
-            }
-
-            .switch input { 
-                opacity: 0;
-                width: 0;
-                height: 0;
-            }
-
-            .slider {
-                position: absolute;
-                cursor: pointer;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #ccc;
-                -webkit-transition: .4s;
-                transition: .4s;
-            }
-
-            .slider:before {
-                position: absolute;
-                content: "";
-                height: 19px;
-                width: 19px;
-                left: 4px;
-                bottom: 4px;
-                background-color: white;
-                -webkit-transition: .4s;
-                transition: .4s;
-            }
-
-            input:checked + .slider {
-                background-color: #2196F3;
-            }
-
-            input:focus + .slider {
-                box-shadow: 0 0 1px #2196F3;
-            }
-
-            input:checked + .slider:before {
-                -webkit-transform: translateX(26px);
-                -ms-transform: translateX(26px);
-                transform: translateX(26px);
-            }
-
-            /* Rounded sliders */
-            .slider.round {
-                border-radius: 34px;
-            }
-
-            .slider.round:before {
-                border-radius: 50%;
-            }#addstory{
-                background-color: #555555; /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }textarea{
-                font-size: 16px;
-                width: 100%;
-                height: 125px;
-            }input{
-                font-size: 16px;
-                width:100%;
-                height:40px;
-            }#about{
-                float: right;
-                margin-right:0;
-                /* background-color:blueviolet; */
-                width: 15%;
+            }.slider{
+                height:0px;
+                outline: none;
             }
 
 
         </style>
+
 
     </head>
     <body>
@@ -187,36 +84,54 @@
             <li><a href="post.html">Add your own Stories or History</a></li>
         </ul>
         <div id="center">
-           
-                    <br>
-                    <input type="text" id="Title" placeholder="Title of the story">
-                    <input type="text" id="Date" placeholder="Date the story occured">
-                    <textarea id="content" placeholder="Write your Story or History here"></textarea>
-                    <input type="text" id="Author" placeholder="Write your name here">
-                    <textarea id="Sources" placeholder="Sources here. At least one is mandatory if writing a history. Just a link is necessary. "></textarea>
-                    <div id="buttons" style="background-color: blueviolet;">
-                       
-                        <p style="float: left; margin-top: 0;">Story</p>
-                        <label class="switch">
-                            <input id="check" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <p style="float: left;margin-top: 0;margin-right: 20px;">History</p>
-                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><i class="fa fa-paperclip"></i></button>
-                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><b>B</b></button>
-                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><em>I</em></button>
-                        <button style="float: left; height:25px; width: 25px; margin-right: 5px;"><u>U</u></button>
+            <div id="intro">
+                <h2>Brief History of Toronto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                <img src="placeholder2.png">
+                <br>
+            </div>
+            <div id="NorthToronto">
+                <div>
+                    <h2 style="text-align: center; font-size: 30px;">North Toronto</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+
+                </div>
+                <div class="location" id="DuplexEg">
+                    <h2>Duplex and Eglinton Intersection</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img id="test" src="images/DuplexEgold.jpg" style="width: 915px; position:absolute; clip: rect(0, 458, 500px, 0);">
+                        <img id="test2" src="images/DuplexEgnew.jpg" style="width: 915px; position:absolute; clip: rect(0,915, 500px,458)">
+                        <div id="slidertest" class="slidecontainer">
+                            <input type="range" min="0" max="1000" value="500" class="slider" id="myRange" style="width: 915px;margin-top: 150px; margin-left:0px;height:100px; position:absolute;">
+                        </div>
                     </div>
-                    
-                    <br>
-                    <br>
-                    <button onclick="writestuff()" id="addstory">Add Story</button>
-            
+                </div>
+                <div class="location" id="location 2" style="margin-top: 490px;">
+                    <h2>Location 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+                <div class="location" id="location 3">
+                    <h2>Location 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+                <div class="location" id="location 4">
+                    <h2>Location 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tempus scelerisque. Pellentesque sagittis tortor dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sed rhoncus euismod fermentum. Quisque sit amet viverra massa, non dignissim dolor. Morbi imperdiet malesuada nulla ut placerat. Aenean id sodales neque. Proin nec lacus velit. Phasellus lacus ipsum, tincidunt pretium pharetra in, fringilla a eros. Quisque dictum nulla et posuere scelerisque. Donec viverra quam vel libero fringilla, a cursus eros semper. Mauris molestie, dui a gravida auctor, augue lectus tempus turpis, sit amet luctus massa eros in dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
+                    <div class="slider images">
+                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div id="about">
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet,  dolor, scelerisque venenatis libero sodales at. Quisque dapibus eu neque sed accumsan. Sn dui. Quisque sed molestie ipsum. Pellentesque eget odio nec turpis iaculis placerat sed cursus augue.</p>
-        </div>
+
 
         <script>
             var firebaseConfig = {
@@ -231,60 +146,20 @@
             };
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-            const db=firebase.firestore();
-            //console.log(new Date())
-            
-            
-
-            function writestuff(){
+            firebase.analytics()
+            // var widther=document.getElementById("center").clientWidth;
+            // alert(widther)
+            document.getElementById("myRange").oninput=()=>{
+                var slideinput=document.getElementById("myRange").value;
                 
-                var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
-                var d=new Date()
-                var dateposted=d.getDate()+" "+months[d.getMonth()]+ " "+ d.getFullYear()
-                console.log(d.getMilliseconds())
-
-                console.log("hello")
-                var title=document.getElementById("Title").value;
-                var date=document.getElementById("Date").value;
-                var content=document.getElementById("content").value;
-                var author=document.getElementById("Author").value;
-                var sources=document.getElementById("Sources").value;
-                var typetext=document.getElementById("check").checked;
-                console.log(typetext)
-                if(typetext==false){
-                    //story
-                    db.collection("stories").add({
-                        title:title,
-                        date:date,
-                        story:content,
-                        author:author,
-                        dateposted:dateposted,
-                        sortdate:d.getTime()
-
-                    }).catch((error)=>{
-                        console.error(error)
-                    })
-
-                }else if(typetext==true){
-                    //history
-                    db.collection("histories").add({
-                        title:title,
-                        date:date,
-                        history:content,
-                        author:author,
-                        sources:sources,
-                        dateposted:dateposted,
-                        sortdate:d.getTime()
-                    }).catch((error)=>{
-                        console.error(error)
-                    })
-
-                }
+                var imagewidth=document.getElementById("test").width;
                 
-
+                document.getElementById("test").style.clip="rect(0,"+imagewidth*(0.001*slideinput)+"px, 500px,0)"
+                document.getElementById("test2").style.clip="rect(0,915px, 500px,"+ (imagewidth-(imagewidth*((0.001*(1000-slideinput)))))+"px)"
+                // document.getElementById("test2").style.clip="rect(0,420px,200px,200px)"
             }
         </script>
+
+
     </body>
 </html>
