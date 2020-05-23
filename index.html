@@ -119,8 +119,8 @@
             <div id="intro">
                 <h2>Brief History of Toronto</h2>
                 <p>Toronto was founded in 1793 by Governor John Graves Simcoe and is now the largest city in Canada, the third largest in North America. Governor John Graves Simcoe was told to create a new city farther away from the United States as a new capital. Simcoe wanted to create the new capital where kitchener is today, but was denied due to lack of water access. While surveying the land, he got lost and a group of natives who knew his father helped him find his way to lake Ontario. He surveyed this land, knew it was far away from any land border with the United States and saw that it was sheltered by the Toronto islands, unable to be seen from lands and potential invading ships. Knowing the potential need for evacuation, he devised a plan for a straight road that would run north up until Lake Simcoe, named after his father, that would allow them to escape safely. To build this road and start the city, Governer Simcoe started giving land lots to wealthy loyalists with the requirement that at the center where Yonge street is, the owners had to maintain the road and they could not sell off land until a year after they got the land.  </p>
-                <img src="placeholder2.png">
-                <br>
+                <img src="images/Toronto.png">
+                <p>Map Of Toronto Plots</p>
             </div>
             <div id="NorthToronto">
                 <div>
@@ -160,8 +160,12 @@
                 <div class="location" id="location 4" style="margin-top: 540px;">
                     <h2>Original Post Office</h2>
                     <p>Post offices are essential for the marking of a village as it gave them access to communication with other areas nearby and around Canada. The original Post Office for the Eglinton Village was at the North east corner of Keewatin and Yonge, then at the amalgamation into North Toronto, the post office moved to the South east corner of Keewatin and Yonge. In 1920, the post office moved to Montgomery Square, home of the famous Montgomery Tavern, where it stayed open until 2012. It is now opening a condo with the base keeping the post office. </p>
-                    <div class="slider images">
-                        <img src="Screen Shot 2020-04-14 at 2.33.53 PM.png">
+                    <div class="slider images" style="margin-left: 50px;">
+                        <img id="Office" src="images/PostOfficeOld.png" style="width: 650px; height:500px;position:absolute; clip: rect(0, 325px, 500px, 0);">
+                        <img id="Office2" src="images/PostOfficeNew.jpg" style="width: 650px; height:500px;position:absolute; clip: rect(0,650, 500px,325px)">
+                        <div id="slidertest" class="slidecontainer">
+                            <input type="range" min="0" max="1000" value="500" class="slider" id="slider4" style="width: 700px;margin-top: 250px; margin-left:-25px;height:0px; position:absolute;">
+                        </div>
                     </div>
                 </div>
 
@@ -201,6 +205,15 @@
                 
                 document.getElementById("fisher").style.clip="rect(0,"+imagewidth*(0.001*slideinput)+"px, 500px,0)"
                 document.getElementById("fisher2").style.clip="rect(0,915px, 500px,"+ (imagewidth-(imagewidth*((0.001*(1000-slideinput)))))+"px)"
+                // document.getElementById("test2").style.clip="rect(0,420px,200px,200px)"
+            }
+            document.getElementById("slider4").oninput=()=>{
+                var slideinput=document.getElementById("slider4").value;
+                
+                var imagewidth=document.getElementById("Office").width;
+                
+                document.getElementById("Office").style.clip="rect(0,"+imagewidth*(0.001*slideinput)+"px, 500px,0)"
+                document.getElementById("Office2").style.clip="rect(0,915px, 500px,"+ (imagewidth-(imagewidth*((0.001*(1000-slideinput)))))+"px)"
                 // document.getElementById("test2").style.clip="rect(0,420px,200px,200px)"
             }
         </script>
