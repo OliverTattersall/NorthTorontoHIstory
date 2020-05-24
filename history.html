@@ -211,9 +211,9 @@
                 data.forEach((doc)=>{
                     count+=1
                     if(count%2==1){
-                        outputstrleft+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['story']+'</p><p>'+doc.data()['author']+'</p><p>Posted: '+doc.data()['dateposted']+'</p></div></div>'
+                        outputstrleft+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['history']+'</p><p>'+doc.data()['author']+'</p><p>Posted: '+doc.data()['dateposted']+'</p></div></div>'
                     }else if(count%2==0){
-                        outputstrright+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['story']+'</p><p>'+doc.data()['author']+'</p><p>Posted: '+doc.data()['dateposted']+'</p></div></div>'
+                        outputstrright+='<div class="card"><div class="container"><h2>'+doc.data()["title"]+'</h2><h3>'+doc.data()['date']+'</h3><p>'+doc.data()['history']+'</p><p>'+doc.data()['author']+'</p><p>Posted: '+doc.data()['dateposted']+'</p></div></div>'
                     }
                     list.push(doc.data())
                     
