@@ -253,7 +253,7 @@
                 console.log(typetext)
                 if(typetext==false){
                     if(title==""||date==""||content==""||author==""){
-                        console.log("add stuff")
+                        alert("Please Fill In All Necessary Boxes")
                     }else{
                         db.collection("stories").add({
                             title:title,
@@ -265,14 +265,14 @@
 
                         }).catch((error)=>{
                             console.error(error)
+                        }).then(()=>{
+                            alert("Story Added")
                         })
                     }
                     //story
-                    
-
                 }else if(typetext==true){
                     if(title==""||date==""||content==""||author==""||sources==""){
-                        console.log("add stuff")
+                        alert("Please Fill In All Necessary Boxes")
                     }else{
                         db.collection("histories").add({
                             title:title,
@@ -284,6 +284,8 @@
                             sortdate:d.getTime()
                         }).catch((error)=>{
                             console.error(error)
+                        }).then(()=>{
+                            alert("History Added")
                         })
                     }
                     //history
