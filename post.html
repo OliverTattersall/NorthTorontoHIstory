@@ -189,11 +189,11 @@
         <div id="center">
            
                     <br>
-                    <input type="text" id="Title" placeholder="Title of the story">
-                    <input type="text" id="Date" placeholder="Date the story occured">
-                    <textarea id="content" placeholder="Write your Story or History here"></textarea>
-                    <input type="text" id="Author" placeholder="Write your name here">
-                    <textarea id="Sources" placeholder="Sources here. At least one is mandatory if writing a history. Just a link is necessary. "></textarea>
+                    <input class='inputboxes' type="text" id="Title" placeholder="Title of the story">
+                    <input class='inputboxes' type="text" id="Date" placeholder="Date the story occured">
+                    <textarea class='inputboxes' id="content" placeholder="Write your Story or History here"></textarea>
+                    <input class='inputboxes' type="text" id="Author" placeholder="Write your name here">
+                    <textarea class='inputboxes' id="Sources" placeholder="Sources here. At least one is mandatory if writing a history. Just a link is necessary. "></textarea>
                     <div id="buttons" style="background-color: blueviolet;">
                        
                         <p style="float: left; margin-top: 0;">Story</p>
@@ -214,17 +214,21 @@
             <p>This page is where you can add your own stories and history about this neighbourhood. Please make sure all necessary fields are filled out: all fields are necessary for adding history, sources is not necessary if you are only adding a story. A source could just be a link. Switch between writing a story and a history using the toggle switch at the bottom.  </p>
         </div>
 
+      
         <script>
-            var firebaseConfig = {
-                apiKey: "AIzaSyAwfVDBdOqoBcngST7p0AKpyd6ls4_CA3M",
-                authDomain: "northtoronto-d4b21.firebaseapp.com",
-                databaseURL: "https://northtoronto-d4b21.firebaseio.com",
-                projectId: "northtoronto-d4b21",
-                storageBucket: "northtoronto-d4b21.appspot.com",
-                messagingSenderId: "121807116095",
-                appId: "1:121807116095:web:6cffa8780a7d1a1fbae58a",
-                measurementId: "G-R2XHV4VHFY"
+
+            const firebaseConfig = {
+              apiKey: "AIzaSyBr82lf_mJNINggjBO1LRj7f81J1geYTAk",
+              authDomain: "northtorontohistory.firebaseapp.com",
+              databaseURL: "https://northtorontohistory-default-rtdb.firebaseio.com",
+              projectId: "northtorontohistory",
+              storageBucket: "northtorontohistory.appspot.com",
+              messagingSenderId: "864463281667",
+              appId: "1:864463281667:web:b354b7413a6053fa44b836",
+              measurementId: "G-9VNB32JXFE"
             };
+
+
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
@@ -267,6 +271,10 @@
                             console.error(error)
                         }).then(()=>{
                             alert("Story Added")
+                            let inputboxes = document.getElementsByClassName('inputboxes')
+                            for(i=0;i<inputboxes.length;i++){
+                                inputboxes[i].value="";
+                            }
                         })
                     }
                     //story
@@ -286,6 +294,10 @@
                             console.error(error)
                         }).then(()=>{
                             alert("History Added")
+                            let inputboxes = document.getElementsByClassName('inputboxes')
+                            for(i=0;i<inputboxes.length;i++){
+                                inputboxes[i].value="";
+                            }
                         })
                     }
                     //history
